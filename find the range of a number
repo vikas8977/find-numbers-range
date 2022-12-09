@@ -1,0 +1,18 @@
+def find(i):
+    for j in range(2,i):
+        if(i%j)==0:
+            return 1
+    return 0
+a=int(input("start"))
+b=int(input("end"))
+c=0
+p=0
+for i in range(a,b+1):
+    m=find(i)
+    if(m==1):
+        c+=1
+        print(i," is composite number")
+    else:
+        p+=1
+        print(i," is  prime ")
+print(f"{p} prime and {c} composite numbers in the range")
